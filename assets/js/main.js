@@ -42,3 +42,8 @@ const createUserCardHtml = async() => {
         throw new Error('No pudimos generar la tarjeta')
     }
 }
+
+const printHtmlCard = async(container, callback) => {
+    const htmlTemplate = await callback
+    container.innerHTML = htmlTemplate
+}
